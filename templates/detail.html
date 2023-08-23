@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{movie.img.url}}" width="350" height="250"><br>
+        </div>
+    <div class="col-md-6">
+        <h2 style="color:green">{{movie.name}}</h2><br>
+        <h3>{{movie.disc}}</h3><br>
+        <h5>{{movie.year}}</h5><br>
+        <a class="btn btn-warning" href="{% url 'movieapp:update_movies' movie.id %}">update data</a>
+        <a class="btn btn-danger" href="{% url 'movieapp:delete_func' movie.id %}">delete</a>
+        <br>
+    </div>
+
+<!--<img src="{{movie.img.url}}" width="250" height="300"><br>-->
+<!--{{movie.name}}<br>-->
+<!--{{movie.disc}}<br>-->
+<!--{{movie.year}}<br>-->
+<!--<a class="btn btn-warning" href="{% url 'movieapp:update_movies' movie.id %}">update data</a>-->
+<!--<a class="btn btn-danger" href="{% url 'movieapp:delete_func' movie.id %}">delete</a>-->
+<!--movieapp&#45;&#45;its from url.py path('',include("movieapp.urls"))-->
+<!--and the update_movie from the url.py name-->
+    <br>
+    </div>
+
+</div>
+{% endblock %}

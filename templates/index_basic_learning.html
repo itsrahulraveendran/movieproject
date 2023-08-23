@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<!--<h1>Movies</h1>-->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-3">-->
+<!--            <div class="card" style="width: 18rem;">-->
+<!--  <img class="card-img-top" src="..." alt="Card image cap">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</div>-->
+
+
+{% for i in movie_list %}
+<!--    <a href="https:www.google.com">{{i.name}}<br>-->
+<!--{{i.name}}&#45;&#45;&ndash;&gt;{{i.disc}}&#45;&#45;&ndash;&gt;{{i.year}}-->
+<!--        <a href="Movie/{{i.id}}">{{i.name}}<br>-->
+<img src="{{i.img.url}}" width="250" height="300"><br>
+<a href="{% url 'movieapp:detail' i.id %}">{{i.name}}<br></a>
+{% endfor %}
+{% endblock %}
+
+
+
+<!--this parts moved to base.html-->
+
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>home</title>-->
+
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="{% static 'style.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash; Image and text &ndash;&gt;-->
+<!--<nav class="navbar navbar-dark bg-dark">-->
+<!--  <a class="navbar-brand" href="#">-->
+<!--&lt;!&ndash;    <img src="/docs/4.6/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">&ndash;&gt;-->
+<!--    1GOMOVIES-->
+<!--  </a>-->
+<!--</nav>-->
+<!--&lt;!&ndash;<h1>Movies</h1>&ndash;&gt;
+
+added to base.html-->

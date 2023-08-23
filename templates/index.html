@@ -1,0 +1,64 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<div>
+<h1>Movies</h1>
+
+ </div>
+<div class="container">
+    <div class="row">
+        {% for i in movie_list %}
+        <div class="col-md-3"><br>
+            <div class="card" style="width: 16rem;height:400px">
+             <img class="card-img-top" src="{{i.img.url}}" alt="Card image cap" width="100px" height="250px">
+            <div class="card-body">
+             <h5 style="color:black" class="card-title">{{i.name}}</h5>
+            <p class="card-text"></p>
+            <a href="{% url 'movieapp:detail' i.id %}" class="btn btn-primary">about more</a>
+                 <a class="btn btn-warning" href="{% url 'movieapp:add_movie' %}">add data</a>
+  </div>
+<!--          <div>-->
+<!--             <a class="btn btn-warning" href="{% url 'movieapp:add_movie' %}">add data</a>-->
+
+<!--        </div>-->
+</div>
+        </div>
+      {% endfor %}
+    </div>
+    <br>
+</div>
+{% endblock %}
+
+
+<!--    <a href="https:www.google.com">{{i.name}}<br>-->
+<!--{{i.name}}&#45;&#45;&ndash;&gt;{{i.disc}}&#45;&#45;&ndash;&gt;{{i.year}}-->
+<!--        <a href="Movie/{{i.id}}">{{i.name}}<br>-->
+<!--<img src="{{i.img.url}}" width="250" height="300"><br>-->
+<!--<a href="{% url 'movieapp:detail' i.id %}">{{i.name}}<br></a>-->
+
+
+
+
+<!--this parts moved to base.html-->
+
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>home</title>-->
+
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="{% static 'style.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash; Image and text &ndash;&gt;-->
+<!--<nav class="navbar navbar-dark bg-dark">-->
+<!--  <a class="navbar-brand" href="#">-->
+<!--&lt;!&ndash;    <img src="/docs/4.6/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">&ndash;&gt;-->
+<!--    1GOMOVIES-->
+<!--  </a>-->
+<!--</nav>-->
+<!--&lt;!&ndash;<h1>Movies</h1>&ndash;&gt;
+
+added to base.html-->
